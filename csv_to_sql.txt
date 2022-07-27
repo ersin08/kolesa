@@ -1,0 +1,14 @@
+#import csv file  to sql
+create table kolesa(
+city varchar(50),
+dates date,
+description varchar(100),
+summ decimal(12,2)
+);
+LOAD DATA INFILE "C:\Users\yersi\Downloads\Telegram Desktop\ersin_kolesa.csv"
+INTO TABLE CSVImport
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
